@@ -1,7 +1,7 @@
 node {
 
 stage ('Checkout')  {
-checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'd8801080-9657-499d-a3de-d5579dd4a898', url: 'https://bitbucket.org/nakins/step/src/master/']]])
+tool name: 'Maven3', type: 'maven'
                     }
 
 stage ('Build')
